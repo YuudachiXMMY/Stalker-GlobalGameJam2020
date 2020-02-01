@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/game_main.rpy", line 55: u'while' is not a keyword argument or valid child for the screen statement.
-    while tmp_t != 4.1:
+File "game/script.rpy", line 8: expected 'image_name_component' not found.
+    show 'bg_st_shop'
          ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Feb 01 10:50:46 2020
+Sat Feb 01 12:47:33 2020
