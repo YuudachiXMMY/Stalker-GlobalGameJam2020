@@ -5,13 +5,22 @@
 init offset = -10
 
 ################################################################################
-## Main
+## Ani
 ################################################################################
-screen game_ani_start():
+screen f_1_110(t):
 
-    # tag game_map_street
-    modal True
+    add 'f_1_110' xpos 622 ypos 650 align(0.5, 1.0) xoffset global_xoffset
 
-    add 'f_1_110' xpos 622 ypos 650 align(0.5, 1.0)
+    timer t action Hide('f_1_110')
 
-    timer 1.2 action Hide('game_ani_start')
+screen m_walk_slow(t):
+
+    add 'm_walk_slow' xpos 130 ypos 650 align(0.5, 1.0)
+
+    timer t action Hide('m_walk_slow')
+
+screen m_s(t):
+
+    add 'm_s' xpos 130 ypos 650 align(0.5, 1.0)
+
+    timer t action Hide('m_s')
