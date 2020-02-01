@@ -44,7 +44,21 @@ screen game_map_street():
     add 'bg_street' xpos 0 ypos 0 xoffset global_xoffset
 
     use game_buttonControll(3840-1280)
-    use game_map_street_chaLH
+    # use game_map_street_chaLH
+
+    timer 0.01 action Show('game_ani_start')
+
+    timer 1.8 action SetVariable('global_xoffset', global_xoffset-20)
+    timer 1.9 action SetVariable('global_xoffset', global_xoffset-20)
+    timer 2.0 action SetVariable('global_xoffset', global_xoffset-20)
+    timer 2.1 action SetVariable('global_xoffset', global_xoffset-20)
+    timer 2.2 action SetVariable('global_xoffset', global_xoffset-20)
+    timer 2.3 action SetVariable('global_xoffset', global_xoffset-20)
+    timer 2.4 action SetVariable('global_xoffset', global_xoffset-20)
+    timer 2.5 action SetVariable('global_xoffset', global_xoffset-20)
+    timer 2.6 action SetVariable('global_xoffset', global_xoffset-20)
+    timer 2.7 action SetVariable('global_xoffset', global_xoffset-20)
+    timer 2.8 action SetVariable('global_xoffset', global_xoffset-20)
 
 # screen game_map_street_chaLH():
 

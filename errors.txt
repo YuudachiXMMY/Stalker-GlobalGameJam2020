@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/game_main.rpy", line 49: screen expects a non-empty block.
-    screen game_map_street_chaLH():
-                                   ^
+File "game/game_main.rpy", line 51: u'pause' is not a keyword argument or valid child for the screen statement.
+    pause 1.0
+         ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Feb 01 02:44:19 2020
+Sat Feb 01 09:51:18 2020
