@@ -3,9 +3,11 @@ label start:
 
     "start"
 
-    $ global_xoffset = 0
+    # $ global_xoffset = 0
 
-    call screen game_map_street_1
+    # call screen game_map_street_1
+
+    $ global_xoffset = -400
     call screen game_map_street_2
 
     $ global_xoffset = 0

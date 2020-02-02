@@ -14,3 +14,5 @@ default tmp_xoffset = global_xoffset
 define start_time_street = 7.5
 
 default interact = 0
+
+default f_xpos = 0

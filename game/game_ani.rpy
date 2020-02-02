@@ -55,3 +55,9 @@ screen chaMoveCon(cha):
     zorder 105
 
     add cha xpos 130 ypos 650 align(0.5, 1.0)
+
+screen f_con(cha):
+
+    zorder 105
+
+    pass
