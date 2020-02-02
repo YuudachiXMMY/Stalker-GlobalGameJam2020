@@ -9,12 +9,9 @@ init offset = -10
 ################################################################################
 screen game_buttonControll(xoffset_max):
 
-    zorder 200
+    zorder 300
 
     if not renpy.get_screen('game_map_street_1'):
-
-        text _(str(xoffset_max*-1)) xpos 200 ypos 100 color '#000'
-        text _(str(global_xoffset)) xpos 200 ypos 200 color '#000'
 
         imagebutton:
             keysym 'z'

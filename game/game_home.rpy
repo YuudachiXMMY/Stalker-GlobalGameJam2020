@@ -9,6 +9,8 @@ init offset = -10
 ################################################################################
 screen game_map_home_1():
 
+    zorder 100
+
     if abs(global_xoffset) >= (4943-1280):
         timer 0.01 action Return('home')
 

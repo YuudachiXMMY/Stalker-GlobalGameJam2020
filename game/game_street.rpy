@@ -68,8 +68,6 @@ screen game_map_street_2():
     add 'bg_street_bg' xpos -50 ypos 0 xoffset global_xoffset
     add 'bg_street_ani2' xpos -50 ypos 0 xoffset global_xoffset
 
-    text _(str(tmp_xoffset)) xpos 500 ypos 600
-
     if global_xoffset == -400:
         add 'm_s' xpos 130 ypos 650 align(0.5, 1.0)
 
