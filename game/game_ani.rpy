@@ -20,6 +20,13 @@ screen f_1_110(t, s):
     else:
         timer 0.01 action Hide('m_s')
 
+screen bf():
+
+    zorder 105
+    
+    if renpy.get_screen('game_map_street_1'):
+        add 'bf' xpos -50 ypos 0 xoffset global_xoffset
+
 screen m_walk_slow(t, s):
 
     zorder 105
@@ -87,10 +94,10 @@ screen f_con():
             add 'f_w' xpos tmp_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset at f_w_con
             timer 4 action [SetVariable('f_xpos', tmp_xpos),
                             Hide('f_con'), Show('f_con')]
-        # elif abs((130+abs(global_xoffset))) >= f_xpos-650 and abs((130+abs(global_xoffset))) <= f_xpos+650:
-        #     timer 0.01 action Return('BE1')
-        # elif abs((130+abs(global_xoffset))) >= f_xpos-850 and abs((130+abs(global_xoffset))) <= f_xpos+850:
-        #     add 'f_ht' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
-        #     timer 0.01 action SetVariable('f_ht_times', f_ht_times+1)
+        elif abs((130+abs(global_xoffset))) >= f_xpos-620 and abs((130+abs(global_xoffset))) <= f_xpos+620:
+            timer 0.01 action Return('BE1')
+        elif abs((130+abs(global_xoffset))) >= f_xpos-870 and abs((130+abs(global_xoffset))) <= f_xpos+870:
+            add 'f_ht' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
+            timer 0.01 action SetVariable('f_ht_times', f_ht_times+1)
         else:
             add 'f_b' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset

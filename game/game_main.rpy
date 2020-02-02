@@ -18,9 +18,9 @@ screen game_buttonControll(xoffset_max):
         elif f_ht_times>5:
             timer 0.01 action Return('BE1')
 
-        text _(str(interact)) xpos 50 ypos 0 color '#000'
-        text _(str(global_xoffset)) xpos 50 ypos 20 color '#000'
-        text _(str(f_ht_times)) xpos 50 ypos 45 color '#000'
+        # text _(str(interact)) xpos 50 ypos 0 color '#000'
+        # text _(str(global_xoffset)) xpos 50 ypos 20 color '#000'
+        # text _(str(f_ht_times)) xpos 50 ypos 45 color '#000'
         # text _(str(tmp_xpos)) xpos 50 ypos 70 color '#000'
         # text _(str(street_achieve)) xpos 100 ypos 0 color '#000'
 

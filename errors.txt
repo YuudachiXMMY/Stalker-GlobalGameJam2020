@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/game_image.rpy", line 319: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
-    linear 1.5 aplha 0.0
-                        ^
+File "game/game_street.rpy", line 22: expecting name after dot.
+    timer 0.4.5 action Show('bf')
+              ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Feb 02 12:48:54 2020
+Sun Feb 02 13:17:57 2020

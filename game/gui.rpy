@@ -11,7 +11,6 @@ init python:
     gui.init(1280, 720)
 
 
-
 ################################################################################
 ## GUI配置变量
 ################################################################################
@@ -22,7 +21,7 @@ init python:
 ## 界面中文本的颜色。
 
 ## 整个界面中使用的强调色，用于标记和突出显示文本。
-define gui.accent_color = '#99ccff'
+define gui.accent_color = '#fff'
 
 ## 当既未选中也未悬停时用于文本按钮的颜色。
 define gui.idle_color = '#888888'
@@ -77,14 +76,16 @@ define gui.label_text_size = 24
 define gui.notify_text_size = 16
 
 ## 游戏标题的大小。
-define gui.title_text_size = 50
+define gui.title_text_size = 30
 
 
 ## 标题和游戏菜单 #####################################################################
 
-## 用于标题菜单和游戏菜单的图像。
-define gui.main_menu_background = "gui/main_menu.png"
-define gui.game_menu_background = "gui/game_menu.png"
+# ## 用于标题菜单和游戏菜单的图像。
+# define gui.main_menu_background = "gui/main_menu.png"
+# define gui.game_menu_background = "gui/game_menu.png"
+define gui.main_menu_background = "cg/start.png"
+define gui.game_menu_background = "cg/start.png"
 
 
 ## 对话 ##########################################################################

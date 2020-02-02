@@ -294,36 +294,36 @@ screen navigation():
 
             textbutton _("开始游戏") action Start()
 
-        else:
+        # else:
 
-            textbutton _("历史") action ShowMenu("history")
+        #     textbutton _("历史") action ShowMenu("history")
 
-            textbutton _("保存") action ShowMenu("save")
+        #     textbutton _("保存") action ShowMenu("save")
 
-        textbutton _("读取游戏") action ShowMenu("load")
+        # textbutton _("读取游戏") action ShowMenu("load")
 
-        textbutton _("设置") action ShowMenu("preferences")
+        # textbutton _("设置") action ShowMenu("preferences")
 
-        if _in_replay:
+        # if _in_replay:
 
-            textbutton _("结束回放") action EndReplay(confirm=True)
+        #     textbutton _("结束回放") action EndReplay(confirm=True)
 
-        elif not main_menu:
+        # elif not main_menu:
 
-            textbutton _("标题界面") action MainMenu()
+        #     textbutton _("标题界面") action MainMenu()
 
-        textbutton _("关于") action ShowMenu("about")
+        # textbutton _("关于") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-            ## “帮助”对移动设备来说并非必须或相关。
-            textbutton _("帮助") action ShowMenu("help")
+        #     ## “帮助”对移动设备来说并非必须或相关。
+        #     textbutton _("帮助") action ShowMenu("help")
 
-        if renpy.variant("pc"):
+        # if renpy.variant("pc"):
 
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-            textbutton _("退出") action Quit(confirm=not main_menu)
+        #     ## The quit button is banned on iOS and unnecessary on Android and
+        #     ## Web.
+        #     textbutton _("退出") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -362,11 +362,10 @@ screen main_menu():
     if gui.show_name:
 
         vbox:
-            text "[config.name!t]":
-                style "main_menu_title"
-
             text "[config.version]":
                 style "main_menu_version"
+            text "[config.name!t]":
+                style "main_menu_title"
 
 
 style main_menu_frame is empty
@@ -385,8 +384,8 @@ style main_menu_vbox:
     xalign 1.0
     xoffset -20
     xmaximum 800
-    yalign 1.0
-    yoffset -20
+    yalign 0.0
+    # yoffset -20
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)

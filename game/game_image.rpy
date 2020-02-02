@@ -317,3 +317,12 @@ image cat_inter_yes:
     alpha 0.0
     linear 2.5 alpha 1.0
     linear 1.5 alpha 0.0
+
+image bf:
+    'bg/street/g_1.png'
+    alpha 0.0
+    linear 1.0 alpha 1.0
+    linear 1.0 alpha 0.0
+    'bg/street/g_2.png'
+    linear 1.0 alpha 1.0
+

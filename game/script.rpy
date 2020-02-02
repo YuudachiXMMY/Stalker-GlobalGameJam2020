@@ -3,9 +3,9 @@ label start:
 
     "start"
 
-    $ global_xoffset = 0
+    # $ global_xoffset = 0
 
-    call screen game_map_street_1
+    # call screen game_map_street_1 with Dissolve(2.0)
 
     jump s1
 
@@ -36,7 +36,7 @@ label s2:
 
     $ global_xoffset = 0
 
-    call screen game_map_cn_1
+    call screen game_map_cn_1 with Dissolve(3.0)
 
     $ tmp = _return
 
@@ -56,7 +56,7 @@ label s3:
 
     $ global_xoffset = 0
 
-    call screen game_map_shop_1
+    call screen game_map_shop_1 with Dissolve(3.0)
 
     $ tmp = _return
 
@@ -72,7 +72,7 @@ label s3:
 label s4:
     $ global_xoffset = 0
  
-    call screen game_map_home_1
+    call screen game_map_home_1 with Dissolve(3.0)
 
     $ tmp = _return
 

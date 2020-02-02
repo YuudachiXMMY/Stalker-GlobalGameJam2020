@@ -19,6 +19,8 @@ screen game_map_street_1():
 
     timer 0.01 action Show('f_1_110', t=6, s='game_map_street_1')
 
+    timer 2.5 action Show('bf')
+
     timer 6+2.6-0.5 action Show('m_s', t=1.5, s='game_map_street_1', transition=Dissolve(0.5))
 
     timer start_time_street+2.5-0.5 action Show('m_walk_slow', t=2.3, s='game_map_street_1')
@@ -43,12 +45,12 @@ screen game_map_street_1():
     timer start_time_street+4.3-0.5 action SetVariable('global_xoffset', global_xoffset-20)
     timer start_time_street+4.4-0.5 action SetVariable('global_xoffset', global_xoffset-20)
     timer start_time_street+4.5-0.5 action SetVariable('global_xoffset', global_xoffset-20)
-    timer start_time_street+4.6-0.5 action SetVariable('global_xoffset', global_xoffset-20)
-    timer start_time_street+4.7-0.5 action SetVariable('global_xoffset', global_xoffset-20)
-    timer start_time_street+4.8-0.5 action SetVariable('global_xoffset', global_xoffset-20)
-    timer start_time_street+4.9-0.5 action SetVariable('global_xoffset', global_xoffset-20)
+    # timer start_time_street+4.6-0.5 action SetVariable('global_xoffset', global_xoffset-20)
+    # timer start_time_street+4.7-0.5 action SetVariable('global_xoffset', global_xoffset-20)
+    # timer start_time_street+4.8-0.5 action SetVariable('global_xoffset', global_xoffset-20)
+    # timer start_time_street+4.9-0.5 action SetVariable('global_xoffset', global_xoffset-20)
 
-    timer start_time_street+5.0 action Show('m_s', t=999, s='game_map_street_1')
+    timer start_time_street+5.5 action Show('m_s', t=999, s='game_map_street_1')
 
     timer 0.001 action Show('bg_street_lights')
 
