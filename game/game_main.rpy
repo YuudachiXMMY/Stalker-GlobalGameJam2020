@@ -13,6 +13,7 @@ screen game_buttonControll(xoffset_max):
     text _(str(global_xoffset)) xpos 200 ypos 200 color '#000'
 
     imagebutton:
+        keysym 'z'
         xalign 1.0 yalign 0.2
         auto 'right_arr_%s'
         # if abs(global_xoffset-10) > abs(xoffset_max):
@@ -23,6 +24,7 @@ screen game_buttonControll(xoffset_max):
         action SetVariable('global_xoffset', global_xoffset-10)
 
     imagebutton:
+        keysym 'x'
         xalign 1.0 yalign 0.5
         auto 'right_arr_%s'
         # if abs(global_xoffset-150) > abs(xoffset_max):
@@ -33,6 +35,7 @@ screen game_buttonControll(xoffset_max):
         action SetVariable('global_xoffset', global_xoffset-75)
 
     imagebutton:
+        keysym 'K_SPACE'
         xalign 1.0 yalign 0.8
         auto 'left_arr_%s'
         action SetVariable('interact', interact+1)

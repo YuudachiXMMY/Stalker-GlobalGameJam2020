@@ -11,11 +11,12 @@ screen game_map_street_1():
 
     modal True
 
-    if abs(global_xoffset) >= (3840-1280):
-        timer 0.01 action Return('street')
+    # if abs(global_xoffset) >= (3840-1280):
+    #     timer 0.01 action Return('street')
 
-    add 'bg_street_bg' xpos 0 ypos 0 xoffset global_xoffset
-    add 'bg_street_lights' xpos 0 ypos 0 xoffset global_xoffset*1.15
+    add 'bg_street_ani1' xpos -50 ypos 0 xoffset global_xoffset
+    add 'bg_street_bg' xpos -50 ypos 0 xoffset global_xoffset
+    add 'bg_street_ani2' xpos -50 ypos 0 xoffset global_xoffset
 
     # use game_buttonControll(3840-1280)
 
@@ -54,17 +55,21 @@ screen game_map_street_1():
 
     timer start_time_street+4.1 action Show('m_s', t=999)
 
-    timer start_time_street+7 action Return()
+    add 'bg_street_lights' xpos -50 ypos 0 xoffset global_xoffset*1.15
+
+    timer start_time_street+6 action Return()
 
 screen game_map_street_2():
 
-    if abs(global_xoffset) >= (3840-1280):
+    if abs(global_xoffset) >= (3760-1280):
         timer 0.01 action Return('street')
 
-    add 'bg_street_bg' xpos 0 ypos 0 xoffset global_xoffset
-    add 'bg_street_lights' xpos 0 ypos 0 xoffset global_xoffset*1.15
+    add 'bg_street_ani1' xpos -50 ypos 0 xoffset global_xoffset
+    add 'bg_street_bg' xpos -50 ypos 0 xoffset global_xoffset
+    add 'bg_street_ani2' xpos -50 ypos 0 xoffset global_xoffset
+    add 'bg_street_lights' xpos -50 ypos 0 xoffset global_xoffset*1.15
 
-    use game_buttonControll(3840-1280)
+    use game_buttonControll(3760-1280)
 
     if interact >= 5:
         timer 0.01 action Return('E1')

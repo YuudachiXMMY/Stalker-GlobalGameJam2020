@@ -18,7 +18,7 @@ init offset = -10
 init -10 python:
     import time
     
-    def xoffset_graduIncrease(tar):
-        while global_xoffset<tar:
-            renpy.SetVariable('global_xoffset', global_xoffset-20)
-            time.sleep(0.5)
+    # def xoffset_graduIncrease(tar):
+    #     while global_xoffset<tar:
+    #         renpy.SetVariable('global_xoffset', global_xoffset-20)
+    #         time.sleep(0.5)

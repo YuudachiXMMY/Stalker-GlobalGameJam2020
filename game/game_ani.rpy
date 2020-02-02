@@ -21,6 +21,6 @@ screen m_walk_slow(t):
 
 screen m_s(t):
 
-    add 'm_s' xpos 130 ypos 650 align(0.5, 1.0)
+    add 'm_s' xpos 130 ypos 650 align(0.5, 1.0) at a
 
     timer t action Hide('m_s')

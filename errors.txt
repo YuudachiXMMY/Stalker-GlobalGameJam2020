@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 8: expected 'image_name_component' not found.
-    show 'bg_st_shop'
-         ^
+File "game/game_ani.rpy", line 26: u'linear' is not a keyword argument or valid child for the add statement.
+    linear 1.0 alpha 1.0
+          ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Feb 01 12:47:33 2020
+Sat Feb 01 17:52:34 2020

@@ -17,7 +17,7 @@ label start:
     call screen game_map_shop_1
 
     $ global_xoffset = 0
-
+ 
     call screen game_map_home_1
 
     $ tmp = _return

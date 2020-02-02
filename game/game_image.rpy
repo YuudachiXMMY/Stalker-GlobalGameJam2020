@@ -12,10 +12,36 @@ image bg_templ:
 
 # Street
 image bg_street_bg:
-    'bg/street/street.jpg'
+    'bg/street/street.png'
 
 image bg_street_lights:
-    'bg/street/lights.jpg'
+    'bg/street/lights.png'
+
+image bg_street_ani1-1:
+    'bg/street/ani1-1.png'
+
+image bg_street_ani1-2:
+    'bg/street/ani1-2.png'
+
+image bg_street_ani1:
+    'bg_street_ani1-1'
+    pause 0.5
+    'bg_street_ani1-2'
+    pause 0.5
+    repeat
+
+image bg_street_ani2-1:
+    'bg/street/ani2-1.png'
+
+image bg_street_ani2-2:
+    'bg/street/ani2-2.png'
+
+image bg_street_ani2:
+    'bg_street_ani2-1'
+    pause 0.5
+    'bg_street_ani2-2'
+    pause 0.5
+    repeat
 
 # CN
 image bg_cn_building:
@@ -111,25 +137,14 @@ image left_arr_idle:
 ## Temp Scene 1
 ################################################################################
 image f_1_110:
-    'cha/tmp_f/1-1.0.png'
-    pause 0.4
-    'cha/tmp_f/1-1.1.png'
-    pause 0.4
-    'cha/tmp_f/1-1.2.png'
-    pause 0.4
-    'cha/tmp_f/1-1.2.obj.png'
-
-image m_walk:
-    'cha/tmp_m/1-walk1.png'
+    'cha/f/s.png'
     pause 0.2
-    'cha/tmp_m/1-walk2.png'
+    'cha/f/w1.png'
     pause 0.2
-    'cha/tmp_m/1-walk3.png'
+    'cha/f/w2.png'
     pause 0.2
+    'cha/f/w1.png'
     repeat
-
-image m_1_110:
-    'cha/tmp_m/1-stable-1.0.png'
 
 ################################################################################
 ## Scene 1
