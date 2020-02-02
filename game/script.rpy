@@ -75,14 +75,28 @@ label s4:
 
     return
 
+
+######################################
+# ending
+
 label e1:
 
-    'e1'
+    scene image '/cg/cg_none_1.jpg' with Dissolve(0.5)
+    pause 0.5
+    scene image '/cg/cg_none_2.jpg' with Dissolve(0.3)
+    pause 0.2
+    scene image '/cg/cg_none_3.jpg' with Dissolve(0.5)
+    pause 0.7
+    scene image '/cg/cg_none_4.jpg' with Dissolve(0.5)
+    pause
 
     return
 
 label be1:
 
-    'be1'
+    scene image '/cg/cg_caught_1.jpg' with Dissolve(2.0)
+    pause 1.5
+    scene image '/cg/cg_caught_2.jpg' with Dissolve(2.0)
+    pause
 
     return

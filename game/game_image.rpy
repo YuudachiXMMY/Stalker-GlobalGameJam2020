@@ -199,6 +199,9 @@ image in_street_1:
 image m_s:
     'cha/m/s.png'
 
+image m_h:
+    'cha/m/hide.png'
+
 image f_b:
     'cha/f/b.png'
 
@@ -283,3 +286,31 @@ image m_walk_fast_sing:
     'cha/m/w-1.png'
     pause 0.06
     'cha/m/s.png'
+
+image cat_inter:
+    'cha/cat/c1.png'
+    pause 1.5
+    'cha/cat/c2.png'
+    pause 0.7
+    'cha/cat/c3.png'
+    pause 0.7
+    'cha/cat/c4.png'
+    pause 0.7
+    'cha/cat/c5.png'
+    pause 0.7
+    'cha/cat/c6.png'
+    pause 0.7
+    'cha/cat/c6.png'
+    xoffset -400
+
+image cat_inter_yes:
+    'cha/cat/c1.png'
+    pause 1.5
+    'cha/cat/c2.png'
+    pause 0.7
+    'cha/cat/c3.png'
+    pause 0.7
+    'cha/cat/c4.png'
+    pause 0.5
+    linear 1.0 alpha 0.0
+    

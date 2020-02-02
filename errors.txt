@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/game_ani.rpy", line 82: screen expects a non-empty block.
-    elif renpy.get_screen([ 'game_map_cn_1',
-                                'game_map_shop_1']):
+File "game/script.rpy", line 82: expected 'image_name_component' not found.
+    scene '/cg/cg_none_2.jpg' with Dissolve(0.5)
+          ^
+
+File "game/script.rpy", line 84: expected 'image_name_component' not found.
+    scene '/cg/cg_none_3.jpg' with Dissolve(0.5)
+          ^
+
+File "game/script.rpy", line 86: expected 'image_name_component' not found.
+    scene '/cg/cg_none_4.jpg' with Dissolve(0.5)
+          ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Feb 02 05:11:07 2020
+Sun Feb 02 10:58:26 2020

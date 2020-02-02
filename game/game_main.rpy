@@ -20,6 +20,19 @@ screen game_buttonControll(xoffset_max):
         text _(str(interact)) xpos 50 ypos 0 color '#000'
 
         imagebutton:
+            xalign 0.8 yalign 0.2
+            auto 'sarr_%s'
+            # if abs(global_xoffset-10) > abs(xoffset_max):
+            #     action NullAction()
+            # elif abs(global_xoffset-10) >= abs(xoffset_max) and abs(global_xoffset) < abs(xoffset_max):
+            #     action SetVariable('global_xoffset', xoffset_max*-1)
+            # else:
+            if tmp_xpos != f_xpos:
+                action [SetVariable('global_xoffset', global_xoffset+60)]
+            else:
+                action [SetVariable('global_xoffset', global_xoffset+60)]
+
+        imagebutton:
             keysym 'z'
             xalign 0.95 yalign 0.2
             auto 'sarr_%s'
@@ -65,5 +78,34 @@ screen game_buttonControll(xoffset_max):
                 action SetVariable('interact', interact+1)
             elif renpy.get_screen('game_map_street_2') and street_achieve == 0 and abs(global_xoffset) >= 1120 and abs(global_xoffset) <= 1390:
                 action SetVariable('street_achieve', street_achieve+1)
+            elif (renpy.get_screen('game_map_cn_1') and global_xoffset!=0 and
+                    ((abs(global_xoffset)>=20 and abs(global_xoffset)<40) or 
+                    (abs(global_xoffset)>=100 and abs(global_xoffset)<120) or 
+                    (abs(global_xoffset)>=380 and abs(global_xoffset)<400) or
+                    (abs(global_xoffset)>=560 and abs(global_xoffset)<600) or
+                    (abs(global_xoffset)>=660 and abs(global_xoffset)<680) or
+                    (abs(global_xoffset)>=800 and abs(global_xoffset)<860) or
+                    (abs(global_xoffset)>=1140 and abs(global_xoffset)<1180) or
+                    (abs(global_xoffset)>=1420 and abs(global_xoffset)<1460) or
+                    (abs(global_xoffset)>=2590 and abs(global_xoffset)<2630) or
+                    (abs(global_xoffset)>=2950 and abs(global_xoffset)<2990) or
+                    (abs(global_xoffset)>=3440 and abs(global_xoffset)<3470) or
+                    (abs(global_xoffset)>=3550 and abs(global_xoffset)<3570) or
+                    (abs(global_xoffset)>=3670 and abs(global_xoffset)<3690) or
+                    (abs(global_xoffset)>=3750 and abs(global_xoffset)<3790) or
+                    (abs(global_xoffset)>=4070 and abs(global_xoffset)<4110) or
+                    (abs(global_xoffset)>=4290 and abs(global_xoffset)<4330) or
+                    (abs(global_xoffset)>=4410 and abs(global_xoffset)<4450))
+                    ):
+                if not m_hide:
+                    action [SetVariable('m_hide', True), Hide('chaMoveCon'),
+                            Show('chaMoveCon', cha='m_h')]
+                else:
+                    action [SetVariable('m_hide', False), Hide('chaMoveCon'),
+                            Show('chaMoveCon', cha='m_s')]                
+            elif (renpy.get_screen('game_map_cn_1') and global_xoffset!=0 and
+                    ((abs(global_xoffset)>=2310 and abs(global_xoffset)<2890)) ):
+                action SetVariable('cn_cat_inter', True)
+
             else:
                 action NullAction()
