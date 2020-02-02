@@ -9,4 +9,8 @@ init offset = -10
 ################################################################################
 transform a:
     alpha 0
-    linear 1.0 alpha 1.0
+    linear 1.5 alpha 1.0
+
+transform b:
+    xpos -100
+    linear 6 xpos 1350

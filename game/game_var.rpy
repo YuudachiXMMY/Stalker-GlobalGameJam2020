@@ -10,6 +10,6 @@ init offset = -10
 
 default global_xoffset = 0
 
-define start_time_street = 2
+define start_time_street = 7.5
 
 default interact = 0
