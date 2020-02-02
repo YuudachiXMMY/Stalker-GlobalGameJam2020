@@ -17,11 +17,11 @@ screen game_map_street_1():
     add 'bg_street_bg' xpos -50 ypos 0 xoffset global_xoffset
     add 'bg_street_ani2' xpos -50 ypos 0 xoffset global_xoffset
 
-    timer 0.01 action Show('f_1_110', t=6)
+    timer 0.01 action Show('f_1_110', t=6, s='game_map_street_1')
 
-    timer 6+2.6 action Show('m_s', t=1.5, transition=Dissolve(0.5))
+    timer 6+2.6 action Show('m_s', t=1.5, s='game_map_street_1', transition=Dissolve(0.5))
 
-    timer start_time_street+2.5 action Show('m_walk_slow', t=2.5)
+    timer start_time_street+2.5 action Show('m_walk_slow', t=2.3, s='game_map_street_1')
 
     timer start_time_street+2.6 action SetVariable('global_xoffset', global_xoffset-20)
     timer start_time_street+2.7 action SetVariable('global_xoffset', global_xoffset-20)
@@ -48,12 +48,11 @@ screen game_map_street_1():
     timer start_time_street+4.8 action SetVariable('global_xoffset', global_xoffset-20)
     timer start_time_street+4.9 action SetVariable('global_xoffset', global_xoffset-20)
 
-    timer start_time_street+4.8 action Show('m_s', t=999)
+    timer start_time_street+5.5 action Show('m_s', t=999, s='game_map_street_1')
 
-    use bg_street_lights
-    # add 'bg_street_lights' xpos -50 ypos 0 xoffset global_xoffset*1.15
+    timer 0.001 action Show('bg_street_lights')
 
-    timer start_time_street+4.6 action Return()
+    timer start_time_street+4.6 action [SetVariable('tmp_xoffset', global_xoffset), Return()]
 
 screen game_map_street_2():
 
@@ -69,19 +68,22 @@ screen game_map_street_2():
     add 'bg_street_bg' xpos -50 ypos 0 xoffset global_xoffset
     add 'bg_street_ani2' xpos -50 ypos 0 xoffset global_xoffset
 
-    timer start_time_street+4.5 action Show('m_s', t=999)
+    text _(str(tmp_xoffset)) xpos 500 ypos 600
 
-    add 'bg_street_lights' xpos -50 ypos 0 xoffset global_xoffset*1.15
+    if global_xoffset == -400:
+        add 'm_s' xpos 130 ypos 650 align(0.5, 1.0)
 
-    text _(str(interact)) xpos 200 ypos 50 color '#000'
-
-    use bg_street_lights
+    timer 0.01 action Show('bg_street_lights')
 
     use game_buttonControll(3760-1280)
-
 
 screen bg_street_lights():
 
     zorder 111
 
-    add 'bg_street_lights' xpos -50 ypos 0 xoffset global_xoffset*1.15
+    if renpy.get_screen(['game_map_street_1', 'game_map_street_2']):
+
+        add 'bg_street_lights' xpos -50 ypos 0 xoffset global_xoffset*1.15
+
+    else:
+        timer 0.01 action Hide('bg_street_lights')

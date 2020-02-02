@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/game_ani.rpy", line 18: expected 'word' not found.
-    tag 
-        ^
+File "game/game_main.rpy", line 28: is not terminated with a newline. (Check strings and parenthesis.)
+                action [SetVariable('global_xoffset', global_xoffset-10),
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Feb 01 18:12:24 2020
+Sat Feb 01 22:25:11 2020

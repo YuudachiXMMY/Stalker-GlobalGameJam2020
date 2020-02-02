@@ -1,23 +1,25 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 8, in script
-    call screen game_map_street_1
+  File "game/script.rpy", line 9, in script
+    call screen game_map_street_2
   File "renpy/common/000statements.rpy", line 531, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/game_ani.rpy", line 10, in execute
-    screen f_1_110(t):
-  File "game/game_ani.rpy", line 10, in execute
-    screen f_1_110(t):
-  File "game/game_ani.rpy", line 16, in execute
-    timer t action Hide('f_1_110')
-AttributeError: 'ImageReference' object has no attribute 'state'
+  File "game/game_street.rpy", line 57, in execute
+    screen game_map_street_2():
+  File "game/game_street.rpy", line 57, in execute
+    screen game_map_street_2():
+  File "game/game_street.rpy", line 73, in execute
+    use chaMoveCon(abs(abs(tmp_xoffset) - abs(global_xoffset)))
+  File "game/game_street.rpy", line 74, in execute
+    
+NameError: name 'm_s' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 8, in script
-    call screen game_map_street_1
+  File "game/script.rpy", line 9, in script
+    call screen game_map_street_2
   File "W:\GamePython\renpy-7.3.2-sdk\renpy\ast.py", line 1949, in execute
     self.call("execute")
   File "W:\GamePython\renpy-7.3.2-sdk\renpy\ast.py", line 1937, in call
@@ -48,17 +50,18 @@ Full traceback:
     self.update()
   File "W:\GamePython\renpy-7.3.2-sdk\renpy\display\screen.py", line 625, in update
     self.screen.function(**self.scope)
-  File "game/game_ani.rpy", line 10, in execute
-    screen f_1_110(t):
-  File "game/game_ani.rpy", line 10, in execute
-    screen f_1_110(t):
-  File "game/game_ani.rpy", line 16, in execute
-    timer t action Hide('f_1_110')
-  File "W:\GamePython\renpy-7.3.2-sdk\renpy\display\behavior.py", line 2091, in __init__
-    self.state = replaces.state
-AttributeError: 'ImageReference' object has no attribute 'state'
+  File "game/game_street.rpy", line 57, in execute
+    screen game_map_street_2():
+  File "game/game_street.rpy", line 57, in execute
+    screen game_map_street_2():
+  File "game/game_street.rpy", line 73, in execute
+    use chaMoveCon(abs(abs(tmp_xoffset) - abs(global_xoffset)))
+  File "game/game_street.rpy", line 74, in execute
+    
+  File "<screen language>", line 74, in <module>
+NameError: name 'm_s' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 GlobalGameJam2020 1.0
-Sat Feb 01 18:12:08 2020
+Sat Feb 01 22:53:15 2020

@@ -9,6 +9,7 @@ init offset = -10
 ################################################################################
 
 default global_xoffset = 0
+default tmp_xoffset = global_xoffset
 
 define start_time_street = 7.5
 

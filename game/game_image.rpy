@@ -53,6 +53,9 @@ image bg_cn_mt:
 image bg_cn_mid:
     'bg/cn/mid.png'
 
+image bg_cn_sky:
+    'bg/cn/sky.png'
+
 image bg_cn_tree:
     'bg/cn/tree.png'
 
@@ -116,22 +119,36 @@ image bg_hm_ani3:
     'bg/home/ani3.png'
 
 image bg_hm_ani:
-    'bg_hm_ani1'
-    pause 0.5
     'bg_hm_ani2'
-    pause 0.5
+    pause 1.0
+    'bg_hm_ani1'
+    pause 1.0
     'bg_hm_ani3'
-    pause 0.5
+    pause 1.0
+    'bg_hm_ani1'
+    pause 1.0
     repeat
 
 ################################################################################
 ## Gui
 ################################################################################
-image right_arr_idle:
-    'gui/game_screen/rightarr.png'
+image sarr_idle:
+    'gui/game_screen/sarr_idle.png'
 
-image left_arr_idle:
-    'gui/game_screen/leftarr.png'
+image sarr_hover:
+    'gui/game_screen/sarr_hover.png'
+
+image farr_idle:
+    'gui/game_screen/farr_idle.png'
+
+image farr_hover:
+    'gui/game_screen/farr_hover.png'
+
+image inter_idle:
+    'gui/game_screen/inter_idle.png'
+
+image inter_hover:
+    'gui/game_screen/inter_hover.png'
 
 ################################################################################
 ## Temp Scene 1
@@ -192,22 +209,30 @@ image m_walk_fast:
 
 image m_walk_slow_sing:
     'cha/m/s.png'
-    pause 0.2
+    pause 0.12
     'cha/m/w1.png'
-    pause 0.2
+    pause 0.12
     'cha/m/w2.png'
-    pause 0.2
+    pause 0.12
     'cha/m/w1.png'
-    pause 0.2
+    pause 0.12
     'cha/m/s.png'
 
 image m_walk_fast_sing:
     'cha/m/s.png'
-    pause 0.05
+    pause 0.06
     'cha/m/w1.png'
-    pause 0.05
+    pause 0.06
     'cha/m/w2.png'
-    pause 0.05
+    pause 0.06
     'cha/m/w1.png'
-    pause 0.05
+    pause 0.06
+    'cha/m/s.png'
+    pause 0.06
+    'cha/m/w-1.png'
+    pause 0.06
+    'cha/m/w-2.png'
+    pause 0.06
+    'cha/m/w-1.png'
+    pause 0.06
     'cha/m/s.png'
