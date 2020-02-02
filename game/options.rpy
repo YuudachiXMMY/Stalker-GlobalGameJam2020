@@ -11,7 +11,7 @@
 ##
 ## 带有 _() 的字符串表示其可被翻译。
 
-define config.name = _("GlobalGameJam2020")
+define config.name = _("UWNBoundlessGGJ2020")
 
 
 ## 决定上面给出的标题是否显示在主界面屏幕。设置为 False 来隐藏标题。
@@ -21,19 +21,22 @@ define gui.show_name = True
 
 ## 游戏版本号。
 
-define config.version = "1.0"
+define config.version = "GGJ1.0"
 
 
 ## 放置在游戏“关于”屏幕的文本。将文本放在三个引号之间，并在段落之间留一个空行。
 
-define gui.about = _p("""
+define gui.about = _p("""This is a Global Game project from UWNBoundless team in GGJ 2020, Seattle site.
+The team members are Jason(Hairong Wu), Chief Programmer as well as Producer;
+Billie, Jiaxing Li, Jennifer(Yachun Zhang), Yunhan Zhong, Jack(Zebang Song), Andy(Fusheng Wang),
+who are all artist and supporters of the game!
 """)
 
 
 ## 在生成的发布版中，可执行文件和目录所使用的短名称。此处必须是仅 ASCII 字符，并
 ## 且不得包含空格、冒号和分号。
 
-define build.name = "GlobalGameJam2020"
+define build.name = "UWNBoundlessGGJ2020"
 
 
 ## 音效和音乐 #######################################################################
