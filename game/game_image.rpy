@@ -313,4 +313,7 @@ image cat_inter_yes:
     'cha/cat/c4.png'
     pause 0.5
     linear 1.0 alpha 0.0
-    
+    'cha/m/hold_cat.png'
+    alpha 0.0
+    linear 2.5 alpha 1.0
+    linear 1.5 alpha 0.0

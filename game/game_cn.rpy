@@ -25,7 +25,7 @@ screen game_map_cn_1():
     
     if abs(global_xoffset) >= 2310 and abs(global_xoffset) <= 2890:
         timer 0.01 action Show('bg_cn_cat')
-    else:
+    elif abs(global_xoffset) < 2310:
         add 'cha/cat/c1.png' xpos 400 ypos 0 xoffset global_xoffset*0.85
     
     add 'bg_cn_building' xpos -80 ypos 0 xoffset global_xoffset

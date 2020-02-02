@@ -3,11 +3,11 @@ label start:
 
     "start"
 
-    # $ global_xoffset = 0
+    $ global_xoffset = 0
 
-    # call screen game_map_street_1
+    call screen game_map_street_1
 
-    jump s3
+    jump s1
 
 label s1:
 
@@ -22,6 +22,8 @@ label s1:
 
     if tmp == 'BE1':
         jump be1
+    if tmp == 'BE2':
+        jump be2
     if tmp == 'E1':
         jump e1
     
@@ -40,6 +42,8 @@ label s2:
 
     if tmp == 'BE1':
         jump be1
+    if tmp == 'BE2':
+        jump be2
     if tmp == 'E1':
         jump e1
 
@@ -58,6 +62,8 @@ label s3:
 
     if tmp == 'BE1':
         jump be1
+    if tmp == 'BE2':
+        jump be2
     if tmp == 'E1':
         jump e1
 
@@ -72,6 +78,8 @@ label s4:
 
     if tmp == 'BE1':
         jump be1
+    if tmp == 'BE2':
+        jump be2
     if tmp == 'E1':
         jump e1
 
@@ -101,6 +109,13 @@ label be1:
     scene image '/cg/cg_caught_1.jpg' with Dissolve(2.0)
     pause 1.5
     scene image '/cg/cg_caught_2.jpg' with Dissolve(2.0)
+    pause
+
+    return
+
+label be2:
+
+    scene image '/cg/cg_die1.jpg' with Dissolve(2.0)
     pause
 
     return

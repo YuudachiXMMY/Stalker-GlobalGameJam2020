@@ -13,11 +13,16 @@ screen game_buttonControll(xoffset_max):
 
     if not renpy.get_screen('game_map_street_1'):
 
-        text _(str(global_xoffset)) xpos 50 ypos 20 color '#000'
-        text _(str(f_xpos)) xpos 50 ypos 45 color '#000'
-        text _(str(tmp_xpos)) xpos 50 ypos 70 color '#000'
-        text _(str(street_achieve)) xpos 100 ypos 0 color '#000'
+        if abs( abs(f_xpos) - abs(global_xoffset)) > 1700:
+            timer 0.01 action Return('BE2')
+        elif f_ht_times>5:
+            timer 0.01 action Return('BE1')
+
         text _(str(interact)) xpos 50 ypos 0 color '#000'
+        text _(str(global_xoffset)) xpos 50 ypos 20 color '#000'
+        text _(str(f_ht_times)) xpos 50 ypos 45 color '#000'
+        # text _(str(tmp_xpos)) xpos 50 ypos 70 color '#000'
+        # text _(str(street_achieve)) xpos 100 ypos 0 color '#000'
 
         imagebutton:
             xalign 0.8 yalign 0.2
@@ -100,6 +105,25 @@ screen game_buttonControll(xoffset_max):
                 if not m_hide:
                     action [SetVariable('m_hide', True), Hide('chaMoveCon'),
                             Show('chaMoveCon', cha='m_h')]
+                    if f_ht_times>0:
+                        action [SetVariable('m_hide', True), Hide('chaMoveCon'),
+                                Show('chaMoveCon', cha='m_h'), SetVariable('f_ht_times', f_ht_times-1)]
+                else:
+                    action [SetVariable('m_hide', False), Hide('chaMoveCon'),
+                            Show('chaMoveCon', cha='m_s')]      
+            elif (renpy.get_screen('game_map_shop_1') and global_xoffset!=0 and
+                    ((abs(global_xoffset)>=10 and abs(global_xoffset)<=90) or
+                    (abs(global_xoffset)>=340 and abs(global_xoffset)<=420) or
+                    (abs(global_xoffset)>=720 and abs(global_xoffset)<=800) or
+                    (abs(global_xoffset)>=1060 and abs(global_xoffset)<=1140) or
+                    (abs(global_xoffset)>=2150 and abs(global_xoffset)<=2230) )
+                    ):
+                if not m_hide:
+                    action [SetVariable('m_hide', True), Hide('chaMoveCon'),
+                            Show('chaMoveCon', cha='m_h')]
+                    if f_ht_times>0:
+                        action [SetVariable('m_hide', True), Hide('chaMoveCon'),
+                                Show('chaMoveCon', cha='m_h'), SetVariable('f_ht_times', f_ht_times-1)]
                 else:
                     action [SetVariable('m_hide', False), Hide('chaMoveCon'),
                             Show('chaMoveCon', cha='m_s')]                

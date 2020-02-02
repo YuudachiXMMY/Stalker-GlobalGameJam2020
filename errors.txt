@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/game_shop.rpy", line 26: screen expects a non-empty block.
-    if abs(global_xoffset) == 0 and not renpy.get_screen('f_con'):
-                                                                  ^
+File "game/game_image.rpy", line 319: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
+    linear 1.5 aplha 0.0
+                        ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Feb 02 11:21:01 2020
+Sun Feb 02 12:48:54 2020

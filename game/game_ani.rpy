@@ -76,6 +76,7 @@ screen f_con():
             timer 0.01 action Return('BE1')
         elif abs((130+abs(global_xoffset))) >= f_xpos-750 and abs((130+abs(global_xoffset))) <= f_xpos+750:
             add 'f_ht' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
+            timer 0.01 action SetVariable('f_ht_times', f_ht_times+1)
         else:
             add 'f_b' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
 
@@ -88,7 +89,8 @@ screen f_con():
                             Hide('f_con'), Show('f_con')]
         # elif abs((130+abs(global_xoffset))) >= f_xpos-650 and abs((130+abs(global_xoffset))) <= f_xpos+650:
         #     timer 0.01 action Return('BE1')
-        elif abs((130+abs(global_xoffset))) >= f_xpos-850 and abs((130+abs(global_xoffset))) <= f_xpos+850:
-            add 'f_ht' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
+        # elif abs((130+abs(global_xoffset))) >= f_xpos-850 and abs((130+abs(global_xoffset))) <= f_xpos+850:
+        #     add 'f_ht' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
+        #     timer 0.01 action SetVariable('f_ht_times', f_ht_times+1)
         else:
             add 'f_b' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
