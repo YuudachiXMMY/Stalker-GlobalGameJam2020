@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/game_shop.rpy", line 27: keyword argument u'zorder' appears more than once in a screen statement.
-    zorder 111
-          ^
+File "game/game_main.rpy", line 68: u'pass' is not a keyword argument or valid child for the imagebutton statement.
+    pass
+        ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Feb 01 23:16:25 2020
+Sun Feb 02 04:02:02 2020

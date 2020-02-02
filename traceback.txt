@@ -1,7 +1,7 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 9, in script
+  File "game/script.rpy", line 15, in script
     call screen game_map_street_2
   File "renpy/common/000statements.rpy", line 531, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
@@ -9,16 +9,14 @@ While running game code:
     screen game_map_street_2():
   File "game/game_street.rpy", line 57, in execute
     screen game_map_street_2():
-  File "game/game_street.rpy", line 73, in execute
-    use chaMoveCon(abs(abs(tmp_xoffset) - abs(global_xoffset)))
-  File "game/game_street.rpy", line 74, in execute
-    
-NameError: name 'm_s' is not defined
+  File "game/game_street.rpy", line 71, in execute
+    if street_achieve == 0:
+NameError: name 'street_achieve' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 9, in script
+  File "game/script.rpy", line 15, in script
     call screen game_map_street_2
   File "W:\GamePython\renpy-7.3.2-sdk\renpy\ast.py", line 1949, in execute
     self.call("execute")
@@ -54,14 +52,12 @@ Full traceback:
     screen game_map_street_2():
   File "game/game_street.rpy", line 57, in execute
     screen game_map_street_2():
-  File "game/game_street.rpy", line 73, in execute
-    use chaMoveCon(abs(abs(tmp_xoffset) - abs(global_xoffset)))
-  File "game/game_street.rpy", line 74, in execute
-    
-  File "<screen language>", line 74, in <module>
-NameError: name 'm_s' is not defined
+  File "game/game_street.rpy", line 71, in execute
+    if street_achieve == 0:
+  File "<screen language>", line 71, in <module>
+NameError: name 'street_achieve' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
-GlobalGameJam2020 1.0
-Sat Feb 01 22:53:15 2020
+UWNBoundlessGGJ2020 GGJ1.0
+Sun Feb 02 04:13:45 2020

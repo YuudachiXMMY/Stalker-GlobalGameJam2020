@@ -14,3 +14,7 @@ transform a:
 transform b:
     xpos -100
     linear 6 xpos 1350
+
+transform f_w_con:
+    xpos f_xpos
+    linear 4 xpos tmp_xpos
