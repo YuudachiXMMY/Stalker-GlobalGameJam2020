@@ -66,8 +66,6 @@ screen f_con():
     zorder 105
 
     if renpy.get_screen([   'game_map_street_2',
-                            'game_map_cn_1',
-                            'game_map_shop_1',
                             'game_map_home_1']):
 
         if tmp_xpos != f_xpos:
@@ -77,6 +75,20 @@ screen f_con():
         elif abs((130+abs(global_xoffset))) >= f_xpos-350 and abs((130+abs(global_xoffset))) <= f_xpos+350:
             timer 0.01 action Return('BE1')
         elif abs((130+abs(global_xoffset))) >= f_xpos-750 and abs((130+abs(global_xoffset))) <= f_xpos+750:
+            add 'f_ht' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
+        else:
+            add 'f_b' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
+
+    elif renpy.get_screen([ 'game_map_cn_1',
+                            'game_map_shop_1']):
+
+        if tmp_xpos != f_xpos:
+            add 'f_w' xpos tmp_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset at f_w_con
+            timer 4 action [SetVariable('f_xpos', tmp_xpos),
+                            Hide('f_con'), Show('f_con')]
+        elif abs((130+abs(global_xoffset))) >= f_xpos-650 and abs((130+abs(global_xoffset))) <= f_xpos+650:
+            timer 0.01 action Return('BE1')
+        elif abs((130+abs(global_xoffset))) >= f_xpos-850 and abs((130+abs(global_xoffset))) <= f_xpos+850:
             add 'f_ht' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
         else:
             add 'f_b' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset

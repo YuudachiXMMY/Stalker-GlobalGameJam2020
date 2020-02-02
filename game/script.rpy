@@ -7,11 +7,15 @@ label start:
 
     # call screen game_map_street_1
 
-    jump s1
+    jump s2
 
 label s1:
 
+    $ f_xpos = 1720
+    $ tmp_xpos = 1720
+
     $ global_xoffset = -400
+
     call screen game_map_street_2
 
     $ tmp = _return
@@ -24,6 +28,10 @@ label s1:
     jump s2
 
 label s2:
+
+    $ f_xpos = 1560
+    $ tmp_xpos = 1560
+
     $ global_xoffset = 0
 
     call screen game_map_cn_1

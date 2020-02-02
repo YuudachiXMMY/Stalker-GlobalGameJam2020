@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/game_main.rpy", line 68: u'pass' is not a keyword argument or valid child for the imagebutton statement.
-    pass
-        ^
+File "game/game_ani.rpy", line 82: screen expects a non-empty block.
+    elif renpy.get_screen([ 'game_map_cn_1',
+                                'game_map_shop_1']):
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Feb 02 04:02:02 2020
+Sun Feb 02 05:11:07 2020

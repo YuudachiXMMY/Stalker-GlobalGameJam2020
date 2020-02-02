@@ -59,10 +59,12 @@ screen game_map_street_2():
     zorder 100
 
     if abs(global_xoffset) >= (3760-1280):
-        timer 0.01 action Return('street')
+        timer 0.01 action [ Hide('f_con'),
+                            Return('street')]
 
     if interact >= 5:
-        timer 0.01 action Return('E1')
+        timer 0.01 action [ Hide('f_con'),
+                            Return('E1')]
 
     add 'bg_street_ani1' xpos -50 ypos 0 xoffset global_xoffset
     add 'bg_street_bg' xpos -50 ypos 0 xoffset global_xoffset
@@ -71,9 +73,9 @@ screen game_map_street_2():
     if street_achieve == 0:
         add 'in_street_1' xpos 0 ypos 0 xoffset global_xoffset
 
-    if global_xoffset == -400:
+    if abs(global_xoffset) == 400:
         add 'm_s' xpos 130 ypos 690 align(0.5, 1.0)
-    if global_xoffset == -400 and not renpy.get_screen('f_con'):
+    if abs(global_xoffset) == 400 and not renpy.get_screen('f_con'):
         add 'f_b' xpos 1720 ypos 690 align(0.5, 1.0) xoffset global_xoffset
 
     #f 主控
@@ -81,9 +83,9 @@ screen game_map_street_2():
                         Show('f_con')]
     timer 11.5 action [  SetVariable('tmp_xpos', 2710),
                         Show('f_con')]
-    timer 17 action [  SetVariable('tmp_xpos', 3200),
+    timer 17 action [  SetVariable('tmp_xpos', 3550),
                         Show('f_con')]
-    timer 25 action [  SetVariable('tmp_xpos', 3670),
+    timer 25 action [  SetVariable('tmp_xpos', 4000),
                         Show('f_con')]
 
 
