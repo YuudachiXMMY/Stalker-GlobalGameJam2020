@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 82: expected 'image_name_component' not found.
-    scene '/cg/cg_none_2.jpg' with Dissolve(0.5)
-          ^
-
-File "game/script.rpy", line 84: expected 'image_name_component' not found.
-    scene '/cg/cg_none_3.jpg' with Dissolve(0.5)
-          ^
-
-File "game/script.rpy", line 86: expected 'image_name_component' not found.
-    scene '/cg/cg_none_4.jpg' with Dissolve(0.5)
-          ^
+File "game/game_shop.rpy", line 26: screen expects a non-empty block.
+    if abs(global_xoffset) == 0 and not renpy.get_screen('f_con'):
+                                                                  ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Feb 02 10:58:26 2020
+Sun Feb 02 11:21:01 2020
