@@ -30,6 +30,8 @@ define gui.about = _p("""This is a Global Game project from UWNBoundless team in
 The team members are Jason(Hairong Wu), Chief Programmer as well as Producer;
 Billie, Jiaxing Li, Jennifer(Yachun Zhang), Yunhan Zhong, Jack(Zebang Song), Andy(Fusheng Wang),
 who are all artist and supporters of the game!
+
+Previous GitHub Development link(version done during GGJ2020):https://github.com/YuudachiXMMY/Stalker-by-UWNBoundless-GGJ2020
 """)
 
 
