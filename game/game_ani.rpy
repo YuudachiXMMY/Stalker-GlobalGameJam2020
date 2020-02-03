@@ -2,7 +2,7 @@
 ## 初始化
 ################################################################################
 
-init offset = -10
+init offset = -1
 
 ################################################################################
 ## Ani
@@ -83,7 +83,7 @@ screen f_con():
             timer 0.01 action Return('BE1')
         elif abs((130+abs(global_xoffset))) >= f_xpos-750 and abs((130+abs(global_xoffset))) <= f_xpos+750:
             add 'f_ht' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
-            timer 0.01 action SetVariable('f_ht_times', f_ht_times+1)
+            timer 0.01 action SetVariable('persistent.f_ht_times', persistent.f_ht_times+1)
         else:
             add 'f_b' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
 
@@ -98,6 +98,6 @@ screen f_con():
             timer 0.01 action Return('BE1')
         elif abs((130+abs(global_xoffset))) >= f_xpos-870 and abs((130+abs(global_xoffset))) <= f_xpos+870:
             add 'f_ht' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
-            timer 0.01 action SetVariable('f_ht_times', f_ht_times+1)
+            timer 0.01 action SetVariable('persistent.f_ht_times', persistent.f_ht_times+1)
         else:
             add 'f_b' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset

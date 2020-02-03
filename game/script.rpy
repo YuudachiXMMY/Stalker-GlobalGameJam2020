@@ -1,6 +1,11 @@
 ﻿
 label start:
 
+    $ persistent.cn_cat_inter = 0
+    $ persistent.f_ht_times = 0
+    $ persistent.dead_times = 0
+    $ persistent.caught_times = 0
+    
     "start"
 
     # $ global_xoffset = 0
@@ -70,6 +75,10 @@ label s3:
     jump s4
 
 label s4:
+
+    $ f_xpos = 760
+    $ tmp_xpos = 760
+
     $ global_xoffset = 0
  
     call screen game_map_home_1 with Dissolve(3.0)
@@ -80,8 +89,6 @@ label s4:
         jump be1
     if tmp == 'BE2':
         jump be2
-    if tmp == 'E1':
-        jump e1
 
     '[_return]'
 
@@ -106,6 +113,8 @@ label e1:
 
 label be1:
 
+    $ persistent.caught_times += 1
+
     scene image '/cg/cg_caught_1.jpg' with Dissolve(2.0)
     pause 1.5
     scene image '/cg/cg_caught_2.jpg' with Dissolve(2.0)
@@ -114,6 +123,8 @@ label be1:
     return
 
 label be2:
+
+    $ persistent.dead_times += 1
 
     scene image '/cg/cg_die1.jpg' with Dissolve(2.0)
     pause

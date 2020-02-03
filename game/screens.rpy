@@ -4,7 +4,6 @@
 
 init offset = -1
 
-
 ################################################################################
 ## 样式
 ################################################################################
@@ -292,7 +291,14 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("开始游戏") action Start()
+            # textbutton _("开始游戏") action Start():
+            #     keysym 'pad_b_press'
+            imagebutton:
+                anchor (0.0, 0.5)
+                xalign 0.0 ypos 230
+                keysym 'pad_b_press'
+                auto 'start_%s'
+                action Start()
 
         # else:
 
@@ -350,7 +356,10 @@ screen main_menu():
 
     style_prefix "main_menu"
 
-    add gui.main_menu_background
+    if persistent.dead_times == 0:
+        add gui.main_menu_background
+    else:
+        add 'cg/start 1.png'
 
     ## 此空框可使标题菜单变暗。
     frame:
@@ -378,13 +387,14 @@ style main_menu_frame:
     xsize 280
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    # background "gui/overlay/main_menu.png"
+    background None
 
 style main_menu_vbox:
     xalign 1.0
-    xoffset -20
+    # xoffset -20
     xmaximum 800
-    yalign 0.0
+    yalign 1.0
     # yoffset -20
 
 style main_menu_text:
@@ -489,7 +499,8 @@ style game_menu_outer_frame:
     bottom_padding 30
     top_padding 120
 
-    background "gui/overlay/game_menu.png"
+    # background "gui/overlay/game_menu.png"
+    background None
 
 style game_menu_navigation_frame:
     xsize 280
@@ -1431,11 +1442,13 @@ style nvl_window:
 
 style main_menu_frame:
     variant "small"
-    background "gui/phone/overlay/main_menu.png"
+    # background "gui/phone/overlay/main_menu.png"
+    background None
 
 style game_menu_outer_frame:
     variant "small"
-    background "gui/phone/overlay/game_menu.png"
+    # background "gui/phone/overlay/game_menu.png"
+    background None
 
 style game_menu_navigation_frame:
     variant "small"

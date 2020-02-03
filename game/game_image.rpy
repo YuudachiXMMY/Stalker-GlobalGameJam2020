@@ -2,11 +2,25 @@
 ## Game_screen Images 初始化
 ################################################################################
 
-init offset = -10
+init offset = -1
 
 ################################################################################
 ## Backgrounds
 ################################################################################
+image trash1:
+    'bg/home/trash1.png'
+
+image trash2:
+    'bg/home/trash2.png'
+
+image start_idle:
+    zoom 0.6
+    'gui/s_n.png'
+
+image start_hover:
+    zoom 0.6
+    'gui/s_dead.png'
+
 image bg_templ:
     'gui/templet - bg.png'
 
@@ -115,17 +129,15 @@ image bg_hm_ani1:
 image bg_hm_ani2:
     'bg/home/ani2.png'
 
-image bg_hm_ani3:
-    'bg/home/ani3.png'
+image bg_hm_trash1:
+    'bg/home/trash1.png'
+image bg_hm_trash2:
+    'bg/home/trash2.png'
 
 image bg_hm_ani:
+    'bg_hm_ani1'
+    pause 1.0
     'bg_hm_ani2'
-    pause 1.0
-    'bg_hm_ani1'
-    pause 1.0
-    'bg_hm_ani3'
-    pause 1.0
-    'bg_hm_ani1'
     pause 1.0
     repeat
 
@@ -150,6 +162,14 @@ image inter_idle:
 image inter_hover:
     'gui/game_screen/inter_hover.png'
 
+image ques:
+    'gui/game_screen/ques.png'
+image lovebox:
+    'gui/game_screen/love.png'
+image red_h:
+    'gui/game_screen/red_h.png'
+image red_l:
+    'gui/game_screen/red_l.png'
 ################################################################################
 ## Temp Scene 1
 ################################################################################

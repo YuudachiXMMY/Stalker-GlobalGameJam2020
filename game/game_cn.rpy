@@ -2,7 +2,7 @@
 ## 初始化
 ################################################################################
 
-init offset = -10
+init offset = -1
 
 ################################################################################
 ## Game_cn
@@ -46,7 +46,7 @@ screen game_map_cn_1():
                         Show('f_con')]
     timer 28 action [  SetVariable('tmp_xpos', 4120),
                         Show('f_con')]
-    timer 35 action [  SetVariable('tmp_xpos', 6100),
+    timer 35 action [  SetVariable('tmp_xpos', 5800),
                         Show('f_con')]
 
     use game_buttonControll(4500)
@@ -57,9 +57,9 @@ screen bg_cn_cat():
 
     if renpy.get_screen(['game_map_cn_1']):
 
-        if not cn_cat_inter:
+        if not persistent.cn_cat_inter:
             add 'cat_inter' xpos 400 ypos 0 xoffset global_xoffset*0.85
-        elif cn_cat_inter:
+        elif persistent.cn_cat_inter:
             add 'cat_inter_yes' xpos 400 ypos 0 xoffset global_xoffset*0.85
 
     else:

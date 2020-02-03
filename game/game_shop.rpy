@@ -2,7 +2,7 @@
 ## 初始化
 ################################################################################
 
-init offset = -10
+init offset = -1
 
 ################################################################################
 ## Game_Shop
@@ -25,7 +25,6 @@ screen game_map_shop_1():
         add 'm_s' xpos 130 ypos 690 align(0.5, 1.0)
     if abs(global_xoffset) == 0 and not renpy.get_screen('f_con'):
         add 'f_b' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
-    # if abs(global_xoffset) == 0 and not renpy.get_screen('f_con'):
 
     timer 0.01 action Show('bg_st_front')
 

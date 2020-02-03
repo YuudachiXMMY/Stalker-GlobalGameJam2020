@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/game_street.rpy", line 22: expecting name after dot.
-    timer 0.4.5 action Show('bf')
-              ^
+File "game/script.rpy", line 7: expected statement.
+    ^ persistent.caught_times = 0
+                              ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Feb 02 13:17:57 2020
+Sun Feb 02 15:48:21 2020
