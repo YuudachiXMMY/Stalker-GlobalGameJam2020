@@ -10,13 +10,12 @@ label start:
     $ persistent.street_achieve = 0
     $ persistent.f_ht_times = 0
     
-    'start'
 
     play music 'sound/norm.mp3'
 
-    # $ global_xoffset = 0
+    $ global_xoffset = 0
 
-    # call screen game_map_street_1 with Dissolve(2.0)
+    call screen game_map_street_1 with Dissolve(2.0)
 
     jump s1
 
@@ -98,10 +97,12 @@ label s4:
 
     if persistent.street_achieve != 0 and persistent.caught_times > persistent.trash_counts:
         jump ne1
-    if persistent.cn_cat_inter and persistent.caught_times < persistent.trash_counts:
+    elif persistent.cn_cat_inter and persistent.caught_times < persistent.trash_counts:
         jump ne2
-    if :
+    elif persistent.street_achieve != 0 and persistent.caught_times < persistent.trash_counts:
         jump ne4
+    elif persistent.cn_cat_inter and persistent.caught_times > persistent.trash_counts:
+        jump ne5
     else:
         jump ne3
 
@@ -124,6 +125,14 @@ label ne3:
     return
 
 label ne4:
+    scene image '/cg/e4.jpg' with Dissolve(1.0)
+    pause
+    return
+
+label ne5:
+    scene image '/cg/e5.jpg' with Dissolve(1.0)
+    pause
+    return
 
 label e1:
 
