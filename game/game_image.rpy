@@ -228,6 +228,9 @@ image f_b:
 image f_ht:
     'cha/f/ht.png'
 
+# image f_fin:
+#     'cha/f/fin.png'
+
 image f_s:
     'cha/f/s.png'
 

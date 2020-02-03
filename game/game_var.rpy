@@ -18,7 +18,7 @@ default interact = 0
 default f_xpos = 1720
 default tmp_xpos = 1720
 
-default street_achieve = 0
+default persistent.street_achieve = 0
 default cn_achieve = 0
 default shop_achieve = 0
 default home_achieve = 0

@@ -72,7 +72,7 @@ screen game_map_street_2():
     add 'bg_street_bg' xpos -50 ypos 0 xoffset global_xoffset
     add 'bg_street_ani2' xpos -50 ypos 0 xoffset global_xoffset
 
-    if street_achieve == 0:
+    if persistent.street_achieve == 0:
         add 'in_street_1' xpos 0 ypos 0 xoffset global_xoffset
 
     if abs(global_xoffset) == 400:

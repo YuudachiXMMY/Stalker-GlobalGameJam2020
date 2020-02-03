@@ -1,12 +1,18 @@
 ﻿
 label start:
 
+    $ persistent.val = 95
+
     $ persistent.cn_cat_inter = 0
     $ persistent.f_ht_times = 0
     $ persistent.dead_times = 0
     $ persistent.caught_times = 0
+    $ persistent.street_achieve = 0
+    $ persistent.f_ht_times = 0
     
-    "start"
+    'start'
+
+    play music 'sound/norm.mp3'
 
     # $ global_xoffset = 0
 
@@ -90,13 +96,34 @@ label s4:
     if tmp == 'BE2':
         jump be2
 
-    '[_return]'
-
-    return
+    if persistent.street_achieve != 0 and persistent.caught_times > persistent.trash_counts:
+        jump ne1
+    if persistent.cn_cat_inter and persistent.caught_times < persistent.trash_counts:
+        jump ne2
+    if :
+        jump ne4
+    else:
+        jump ne3
 
 
 ######################################
 # ending
+label ne1:
+    scene image '/cg/e1.jpg' with Dissolve(1.0)
+    pause
+    return
+
+label ne2:
+    scene image '/cg/e2.png' with Dissolve(1.0)
+    pause
+    return
+
+label ne3:
+    scene image '/cg/cg_meet.png' with Dissolve(1.0)
+    pause
+    return
+
+label ne4:
 
 label e1:
 
@@ -124,9 +151,12 @@ label be1:
 
 label be2:
 
+    play music 'sound/car.mp3'
+
     $ persistent.dead_times += 1
 
     scene image '/cg/cg_die1.jpg' with Dissolve(2.0)
+    stop music
     pause
 
     return

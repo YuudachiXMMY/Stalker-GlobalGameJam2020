@@ -65,7 +65,9 @@ screen chaMoveCon(cha):
                             'game_map_cn_1',
                             'game_map_shop_1',
                             'game_map_home_1']):
-
+        if renpy.random.randint(0, 100) >= persistent.val:
+            timer 0.01 action Play('sound', 'sound/hei.mp3'), SetVariable('persistent.val', persistent.val-2)
+            add 'lovebox' xpos 130+200 ypos 400 align(0.5, 1.0)
         add cha xpos 130 ypos 690 align(0.5, 1.0)
 
 screen f_con():
@@ -82,8 +84,17 @@ screen f_con():
         elif abs((130+abs(global_xoffset))) >= f_xpos-350 and abs((130+abs(global_xoffset))) <= f_xpos+350:
             timer 0.01 action Return('BE1')
         elif abs((130+abs(global_xoffset))) >= f_xpos-750 and abs((130+abs(global_xoffset))) <= f_xpos+750:
-            add 'f_ht' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
-            timer 0.01 action SetVariable('persistent.f_ht_times', persistent.f_ht_times+1)
+            timer 0.01 action Play('sound','sound/warn.mp3'), SetVariable('persistent.f_ht_times', persistent.f_ht_times+1)
+            if persistent.f_ht_times == 1 or persistent.f_ht_times == 2:
+                add 'ques' xpos f_xpos-150 ypos 400 align(0.5, 1.0) xoffset global_xoffset
+            elif persistent.f_ht_times ==3 or persistent.f_ht_times == 4:
+                add 'red_l' xpos f_xpos-150 ypos 400 align(0.5, 1.0) xoffset global_xoffset
+            elif persistent.f_ht_times == 5:
+                add 'red_h' xpos f_xpos-150 ypos 400 align(0.5, 1.0) xoffset global_xoffset
+            if persistent.f_ht_times == 5:
+                add 'f_fin' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
+            else:
+                add 'f_ht' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
         else:
             add 'f_b' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
 
@@ -97,7 +108,16 @@ screen f_con():
         elif abs((130+abs(global_xoffset))) >= f_xpos-620 and abs((130+abs(global_xoffset))) <= f_xpos+620:
             timer 0.01 action Return('BE1')
         elif abs((130+abs(global_xoffset))) >= f_xpos-870 and abs((130+abs(global_xoffset))) <= f_xpos+870:
-            add 'f_ht' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
-            timer 0.01 action SetVariable('persistent.f_ht_times', persistent.f_ht_times+1)
+            timer 0.01 action Play('sound','sound/warn.mp3'), SetVariable('persistent.f_ht_times', persistent.f_ht_times+1)
+            if persistent.f_ht_times == 1 or persistent.f_ht_times == 2:
+                add 'ques' xpos f_xpos-150 ypos 400 align(0.5, 1.0) xoffset global_xoffset
+            elif persistent.f_ht_times ==3 or persistent.f_ht_times == 4:
+                add 'red_l' xpos f_xpos-150 ypos 400 align(0.5, 1.0) xoffset global_xoffset
+            elif persistent.f_ht_times == 5:
+                add 'red_h' xpos f_xpos-150 ypos 400 align(0.5, 1.0) xoffset global_xoffset
+            if persistent.f_ht_times == 5:
+                add 'f_fin' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
+            else:
+                add 'f_ht' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset
         else:
             add 'f_b' xpos f_xpos ypos 690 align(0.5, 1.0) xoffset global_xoffset

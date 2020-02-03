@@ -24,7 +24,7 @@ screen game_buttonControll(xoffset_max):
         # text _(str(global_xoffset)) xpos 50 ypos 20 color '#000'
         # text _(str(persistent.trash_counts)) xpos 50 ypos 45 color '#000'
         # text _(str(tmp_xpos)) xpos 50 ypos 70 color '#000'
-        # text _(str(street_achieve)) xpos 100 ypos 0 color '#000't', global_xoffset+60)]
+        # text _(str(persistent.street_achieve)) xpos 100 ypos 0 color '#000't', global_xoffset+60)]
 
         imagebutton:
             keysym 'z'
@@ -70,8 +70,9 @@ screen game_buttonControll(xoffset_max):
             auto 'inter_%s'
             if renpy.get_screen('game_map_street_2') and abs(global_xoffset)==400:
                 action SetVariable('interact', interact+1)
-            elif renpy.get_screen('game_map_street_2') and street_achieve == 0 and abs(global_xoffset) >= 1120 and abs(global_xoffset) <= 1390:
-                action SetVariable('street_achieve', street_achieve+1)
+            elif renpy.get_screen('game_map_street_2') and persistent.street_achieve == 0 and abs(global_xoffset) >= 1120 and abs(global_xoffset) <= 1390:
+                # Play('sound', 'sound/en.m4a'), 
+                action SetVariable('persistent.street_achieve', persistent.street_achieve+1)
             elif (renpy.get_screen('game_map_cn_1') and global_xoffset!=0 and
                     ((abs(global_xoffset)>=20 and abs(global_xoffset)<40) or 
                     (abs(global_xoffset)>=100 and abs(global_xoffset)<120) or 
@@ -182,8 +183,8 @@ screen game_buttonControll(xoffset_max):
             auto 'inter_%s'
             if renpy.get_screen('game_map_street_2') and abs(global_xoffset)==400:
                 action SetVariable('interact', interact+1)
-            elif renpy.get_screen('game_map_street_2') and street_achieve == 0 and abs(global_xoffset) >= 1120 and abs(global_xoffset) <= 1390:
-                action SetVariable('street_achieve', street_achieve+1)
+            elif renpy.get_screen('game_map_street_2') and persistent.street_achieve == 0 and abs(global_xoffset) >= 1120 and abs(global_xoffset) <= 1390:
+                action SetVariable('persistent.street_achieve', persistent.street_achieve+1)
             elif (renpy.get_screen('game_map_cn_1') and global_xoffset!=0 and
                     ((abs(global_xoffset)>=20 and abs(global_xoffset)<40) or 
                     (abs(global_xoffset)>=100 and abs(global_xoffset)<120) or 
