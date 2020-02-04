@@ -5,10 +5,7 @@ label start:
 
     $ persistent.cn_cat_inter = 0
     $ persistent.f_ht_times = 0
-    $ persistent.dead_times = 0
-    $ persistent.caught_times = 0
     $ persistent.street_achieve = 0
-    $ persistent.f_ht_times = 0
     
 
     play music 'sound/norm.mp3'
@@ -95,13 +92,13 @@ label s4:
     if tmp == 'BE2':
         jump be2
 
-    if persistent.street_achieve != 0 and persistent.caught_times > persistent.trash_counts:
+    if persistent.street_achieve != 0 and persistent.f_ht_times > persistent.trash_counts:
         jump ne1
-    elif persistent.cn_cat_inter and persistent.caught_times < persistent.trash_counts:
+    elif persistent.cn_cat_inter and persistent.f_ht_times < persistent.trash_counts:
         jump ne2
-    elif persistent.street_achieve != 0 and persistent.caught_times < persistent.trash_counts:
+    elif persistent.street_achieve != 0 and persistent.f_ht_times < persistent.trash_counts:
         jump ne4
-    elif persistent.cn_cat_inter and persistent.caught_times > persistent.trash_counts:
+    elif persistent.cn_cat_inter and persistent.f_ht_times > persistent.trash_counts:
         jump ne5
     else:
         jump ne3
@@ -120,7 +117,7 @@ label ne2:
     return
 
 label ne3:
-    scene image '/cg/cg_meet.png' with Dissolve(1.0)
+    scene image '/cg/cg_3.png' with Dissolve(1.0)
     pause
     return
 
