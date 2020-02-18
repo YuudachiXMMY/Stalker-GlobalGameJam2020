@@ -11,7 +11,7 @@
 ##
 ## 带有 _() 的字符串表示其可被翻译。
 
-define config.name = _("UWNBoundless")
+define config.name = _("Stalker")
 
 
 ## 决定上面给出的标题是否显示在主界面屏幕。设置为 False 来隐藏标题。
@@ -21,7 +21,7 @@ define gui.show_name = True
 
 ## 游戏版本号。
 
-define config.version = "GGJ2020v0.1.0.0"
+define config.version = "v0.1.0.1"
 
 
 ## 放置在游戏“关于”屏幕的文本。将文本放在三个引号之间，并在段落之间留一个空行。
@@ -40,7 +40,7 @@ Previous GitHub Development link(version done during GGJ2020):https://github.com
 ## 在生成的发布版中，可执行文件和目录所使用的短名称。此处必须是仅 ASCII 字符，并
 ## 且不得包含空格、冒号和分号。
 
-define build.name = "UWNBoundlessGGJ2020"
+define build.name = "Stalker"
 
 
 ## 音效和音乐 #######################################################################
@@ -177,8 +177,9 @@ init python:
 
     ## 若要打包文件，需将其列为“archive”。
 
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
+    build.classify('game/**.png', 'archive')
+    build.classify('game/**.jpg', 'archive')
+    build.classify('game/**.mp3', 'archive')
 
     ## 匹配为文档模式的文件，将在 Mac 应用的生成中复制，因此它们同时存在于 app
     ## 和 zip 文件中。
