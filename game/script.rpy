@@ -1,6 +1,10 @@
 ﻿
 label start:
 
+    jump achieve
+
+label startr:
+
     $ persistent.val = 95
 
     $ persistent.cn_cat_inter = 0
@@ -146,7 +150,7 @@ label e1:
 
 label be1:
 
-    $ persistent.caught_times += 1
+    # $ persistent.caught_times += 1
 
     scene image '/cg/cg_caught_1.jpg' with Dissolve(2.0)
     pause 1.5
@@ -159,7 +163,7 @@ label be2:
 
     play music 'sound/car.mp3'
 
-    $ persistent.dead_times += 1
+    # $ persistent.dead_times += 1
 
     scene image '/cg/cg_die1.jpg' with Dissolve(2.0)
     stop music
