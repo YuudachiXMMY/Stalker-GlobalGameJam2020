@@ -11,7 +11,7 @@
 ##
 ## 带有 _() 的字符串表示其可被翻译。
 
-define config.name = _("UWNBoundless")
+define config.name = _("Stalker")
 
 
 ## 决定上面给出的标题是否显示在主界面屏幕。设置为 False 来隐藏标题。
@@ -21,7 +21,7 @@ define gui.show_name = True
 
 ## 游戏版本号。
 
-define config.version = "GGJ2020v0.1.0.0"
+define config.version = "v0.1.0.2"
 
 
 ## 放置在游戏“关于”屏幕的文本。将文本放在三个引号之间，并在段落之间留一个空行。
@@ -30,6 +30,8 @@ define gui.about = _p("""This is a Global Game project from UWNBoundless team in
 The team members are Jason(Hairong Wu), Chief Programmer as well as Producer;
 Billie, Jiaxing Li, Jennifer(Yachun Zhang), Yunhan Zhong, Jack(Zebang Song), Andy(Fusheng Wang),
 who are all artist and supporters of the game!
+
+UWNBoundless now works as a team under 'NetBit @UW' at GitHub and other social media.
 
 This v0.1.x.x is the advance versions for publishing on Steam.
 
@@ -40,7 +42,7 @@ Previous GitHub Development link(version done during GGJ2020):https://github.com
 ## 在生成的发布版中，可执行文件和目录所使用的短名称。此处必须是仅 ASCII 字符，并
 ## 且不得包含空格、冒号和分号。
 
-define build.name = "UWNBoundlessGGJ2020"
+define build.name = "Stalker"
 
 
 ## 音效和音乐 #######################################################################
@@ -185,6 +187,19 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
+
+    # 定义两个归档文件。
+    build.archive("scripts", "all")
+    build.archive("art", "all")
+
+    # 将脚本放入scripts归档。
+    build.classify("game/**.rpy", "scripts")
+    build.classify("game/**.rpyc", "scripts")
+
+    # 将图片放入images归档。
+    build.classify("game/**.jpg", "art")
+    build.classify("game/**.png", "art")
+    build.classify('game/**.mp3', 'art')
 
 
 ## 需要一个 Google Play 授权密钥来下载扩展文件并执行应用内购。授权密钥可以在
