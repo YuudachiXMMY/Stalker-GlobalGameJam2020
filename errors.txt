@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 7: expected statement.
-    ^ persistent.caught_times = 0
-                              ^
+File "game/screens.rpy", line 87: u'size' is not a keyword argument or valid child for the textbutton statement.
+    size 40
+        ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Feb 02 15:48:21 2020
+Fri Feb 28 14:57:53 2020

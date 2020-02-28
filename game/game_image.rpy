@@ -13,13 +13,21 @@ image trash1:
 image trash2:
     'bg/home/trash2.png'
 
-image start_idle:
+image start_idle_EN:
     zoom 0.6
-    'gui/s_n.png'
+    'gui/s_n_EN.png'
 
-image start_hover:
+image start_hover_EN:
     zoom 0.6
-    'gui/s_dead.png'
+    'gui/s_dead_EN.png'
+
+image start_idle_CN:
+    zoom 0.6
+    'gui/s_n_CN.png'
+
+image start_hover_CN:
+    zoom 0.6
+    'gui/s_dead_CN.png'
 
 image bg_templ:
     'gui/templet - bg.png'
