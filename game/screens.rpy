@@ -77,6 +77,28 @@ style frame:
 
 
 ################################################################################
+## 语言切换
+################################################################################
+
+screen language_change():
+    tag menu
+
+    textbutton _(persistent.global_language):
+        xalign 1.0 yalign 0.0
+        action Show('language_list')
+
+screen language_list():
+
+    textbutton _('EN'):
+        xalign 1.0 yalign 0.0
+        action SetVariable('persistent.global_language', 'EN'), Hide('language_list')
+
+    textbutton _('CN'):
+        xalign 1.0 yalign 0.0 ypos 20
+        action SetVariable('persistent.global_language', 'CN'), Hide('language_list')
+
+
+################################################################################
 ## 游戏内屏幕
 ################################################################################
 
@@ -297,7 +319,7 @@ screen navigation():
                 anchor (0.0, 0.5)
                 xalign 0.0 ypos 230
                 keysym 'pad_b_press'
-                auto 'start_%s'
+                auto str('start_%s_'+persistent.global_language)
                 action Start()
 
         # else:
@@ -367,14 +389,15 @@ screen main_menu():
 
     ## “use”语句将其他的屏幕包含进此屏幕。标题屏幕的实际内容在导航屏幕中。
     use navigation
+    use language_change
 
     if gui.show_name:
 
         vbox:
-            text "[config.version]":
-                style "main_menu_version"
             text "[config.name!t]":
                 style "main_menu_title"
+            text "[config.version]":
+                style "main_menu_version"
 
 
 style main_menu_frame is empty
