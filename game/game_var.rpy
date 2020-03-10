@@ -8,6 +8,8 @@ init offset = -1
 ## init
 ################################################################################
 
+default persistent.global_language = 'EN'
+
 default global_xoffset = 0
 default tmp_xoffset = global_xoffset
 

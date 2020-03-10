@@ -21,7 +21,7 @@ define gui.show_name = True
 
 ## 游戏版本号。
 
-define config.version = "v0.1.0.1"
+define config.version = "v0.1.0.2"
 
 
 ## 放置在游戏“关于”屏幕的文本。将文本放在三个引号之间，并在段落之间留一个空行。
@@ -30,6 +30,8 @@ define gui.about = _p("""This is a Global Game project from UWNBoundless team in
 The team members are Jason(Hairong Wu), Chief Programmer as well as Producer;
 Billie, Jiaxing Li, Jennifer(Yachun Zhang), Yunhan Zhong, Jack(Zebang Song), Andy(Fusheng Wang),
 who are all artist and supporters of the game!
+
+UWNBoundless now works as a team under 'NetBit @UW' at GitHub and other social media.
 
 This v0.1.x.x is the advance versions for publishing on Steam.
 
@@ -177,15 +179,27 @@ init python:
 
     ## 若要打包文件，需将其列为“archive”。
 
-    build.classify('game/**.png', 'archive')
-    build.classify('game/**.jpg', 'archive')
-    build.classify('game/**.mp3', 'archive')
+    # build.classify('game/**.png', 'archive')
+    # build.classify('game/**.jpg', 'archive')
 
     ## 匹配为文档模式的文件，将在 Mac 应用的生成中复制，因此它们同时存在于 app
     ## 和 zip 文件中。
 
     build.documentation('*.html')
     build.documentation('*.txt')
+
+    # 定义两个归档文件。
+    build.archive("scripts", "all")
+    build.archive("art", "all")
+
+    # 将脚本放入scripts归档。
+    build.classify("game/**.rpy", "scripts")
+    build.classify("game/**.rpyc", "scripts")
+
+    # 将图片放入images归档。
+    build.classify("game/**.jpg", "art")
+    build.classify("game/**.png", "art")
+    build.classify('game/**.mp3', 'art')
 
 
 ## 需要一个 Google Play 授权密钥来下载扩展文件并执行应用内购。授权密钥可以在
