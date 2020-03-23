@@ -1,13 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 After initialization, but before game start.
-  File "game/screens.rpy", line 90, in prepare_screen
-    screen language_list():
-  File "game/screens.rpy", line 90, in prepare
-    screen language_list():
-  File "game/screens.rpy", line 92, in prepare
-    textbutton _('EN', color='#EEEEEE'):
-TypeError: _() got an unexpected keyword argument 'color'
+  File "game/screens.rpy", line 380, in prepare_screen
+    screen menu_help():
+  File "game/screens.rpy", line 380, in prepare
+    screen menu_help():
+  File "game/screens.rpy", line 382, in prepare
+    textbutton _("Return"):
+  File "game/screens.rpy", line 382, in prepare
+    textbutton _("Return"):
+TypeError: __init__() takes at least 2 arguments (1 given)
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -20,18 +22,20 @@ Full traceback:
     renpy.display.screen.prepare_screens()
   File "W:\GamePython\renpy-7.3.2-sdk\renpy\display\screen.py", line 931, in prepare_screens
     s.ast.prepare_screen()
-  File "game/screens.rpy", line 90, in prepare_screen
-    screen language_list():
-  File "game/screens.rpy", line 90, in prepare
-    screen language_list():
-  File "game/screens.rpy", line 92, in prepare
-    textbutton _('EN', color='#EEEEEE'):
+  File "game/screens.rpy", line 380, in prepare_screen
+    screen menu_help():
+  File "game/screens.rpy", line 380, in prepare
+    screen menu_help():
+  File "game/screens.rpy", line 382, in prepare
+    textbutton _("Return"):
+  File "game/screens.rpy", line 382, in prepare
+    textbutton _("Return"):
   File "W:\GamePython\renpy-7.3.2-sdk\renpy\python.py", line 2052, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "<screen language>", line 92, in <module>
-TypeError: _() got an unexpected keyword argument 'color'
+  File "<screen language>", line 383, in <module>
+TypeError: __init__() takes at least 2 arguments (1 given)
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Stalker v0.1.0.2
-Fri Feb 28 15:04:10 2020
+Mon Mar 23 03:14:34 2020

@@ -322,6 +322,15 @@ screen navigation():
                 auto str('start_%s_'+persistent.global_language)
                 action Start()
 
+            if persistent.global_language == "EN":
+                textbutton _("HELP"):
+                    anchor (0.5, 0.5)
+                    action ShowMenu('menu_help')
+            elif persistent.global_language == "CN":
+                textbutton _("HELP"):
+                    anchor (0.5, 0.5)
+                    action ShowMenu('menu_help')
+
         # else:
 
         #     textbutton _("历史") action ShowMenu("history")
@@ -363,6 +372,27 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
+
+
+## 标题菜单屏幕 ######################################################################
+##
+
+screen menu_help():
+
+    add "gui/nvl.png"
+    
+    add "gui/help/z.png" anchor(0.2, 0.35)
+    add "gui/help/x.png" anchor(0.2, 0.5)
+    add "gui/help/space.png" anchor(0.2, 0.65)
+
+    
+    add "sarr_idle" anchor(0.4, 0.35)
+    add "farr_idle" anchor(0.4, 0.5)
+    add "inter_idle" anchor(0.4, 0.65)
+
+    textbutton _("Return"):
+        anchor(0.2, 0.8)
+        action Hide("menu_help")
 
 
 ## 标题菜单屏幕 ######################################################################
